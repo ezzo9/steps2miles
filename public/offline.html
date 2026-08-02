@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex" />
+<title>You're Offline | Steps to Miles</title>
+<style>
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+    background: #ffffff;
+    color: #211D18;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  .bar {
+    width: 40px;
+    height: 4px;
+    border-radius: 999px;
+    background: #C1502E;
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: #1F3D2B;
+    margin: 0 0 12px;
+  }
+  p {
+    max-width: 340px;
+    line-height: 1.5;
+    color: rgba(33, 29, 24, 0.7);
+    margin: 0 0 24px;
+  }
+  button {
+    min-height: 44px;
+    padding: 0 24px;
+    border: none;
+    border-radius: 10px;
+    background: #C1502E;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #a8441f;
+  }
+</style>
+</head>
+<body>
+  <div class="bar"></div>
+  <h1>You're Offline</h1>
+  <p>
+    This page hasn't been saved for offline use yet. Pages you've already
+    visited will still open normally, reconnect to load a new one.
+  </p>
+  <button onclick="location.reload()">Try Again</button>
+</body>
+</html>
