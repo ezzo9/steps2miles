@@ -130,9 +130,9 @@ export default function StepsCalculator() {
           <div className="flex flex-col gap-1.5">
             <label
               htmlFor="steps"
-              className="flex items-center gap-1.5 font-display text-xs uppercase tracking-wide text-forest sm:text-sm"
+              className="flex items-center gap-1.5 font-display text-sm font-semibold uppercase tracking-wide text-forest sm:text-base"
             >
-              <FootprintsIcon className="h-4 w-4 shrink-0" />
+              <FootprintsIcon className="h-5 w-5 shrink-0" />
               Number of steps
             </label>
             <input
@@ -142,49 +142,47 @@ export default function StepsCalculator() {
               inputMode="numeric"
               value={steps}
               onChange={(e) => setSteps(e.target.value)}
-              className="min-h-14 rounded-xl border border-forest/15 bg-white px-4 text-right font-mono text-2xl text-ink focus:border-forest focus:outline-none focus:ring-2 focus:ring-forest/15 sm:min-h-12 sm:text-xl"
+              placeholder="Type your steps"
+              className="min-h-16 rounded-xl border-2 border-forest/30 bg-forest/[0.02] px-4 text-right font-mono text-3xl font-semibold text-rust placeholder:font-sans placeholder:text-base placeholder:font-normal placeholder:text-ink/30 focus:border-rust focus:outline-none focus:ring-2 focus:ring-rust/20 sm:min-h-14 sm:text-2xl"
             />
           </div>
 
-          {active ? (
-            <>
-              <div className="rounded-2xl bg-forest/[0.04] px-5 py-4 text-center">
-                <p className="font-display text-xs uppercase tracking-wide text-forest/70">
-                  Distance
-                </p>
-                <p className="font-mono text-4xl font-semibold text-rust sm:text-5xl">
-                  {active.miles.toFixed(2)} mi
-                </p>
-                <p className="mt-1 text-[11px] text-ink/50">
-                  {isPersonalized
-                    ? "Personalized to your height & stride"
-                    : `Standard estimate (${DEFAULT_STEPS_PER_MILE.toLocaleString()} steps/mile)`}
-                </p>
-              </div>
-
-              <div className="grid grid-cols-3 gap-2 sm:gap-3">
-                <StatChip label="Kilometers" value={`${active.km.toFixed(2)} km`} />
-                <StatChip label="Walk time" value={active.duration} />
-                <StatChip
-                  label="Calories"
-                  value={`${active.calories.toFixed(0)} kcal`}
-                />
-              </div>
-
-              <p className="text-center text-[11px] text-ink/50">
-                That&apos;s about{" "}
-                <span className="font-mono text-ink/70">
-                  {active.percent}%
-                </span>{" "}
-                of the U.S. average of{" "}
-                {US_AVERAGE_DAILY_STEPS.toLocaleString()} daily steps.
-              </p>
-            </>
-          ) : (
-            <p className="rounded-2xl bg-forest/[0.04] px-5 py-6 text-center font-display text-forest">
-              Enter your steps above to get started
+          <div className="rounded-2xl bg-forest/[0.04] px-5 py-4 text-center">
+            <p className="font-display text-xs uppercase tracking-wide text-forest/70">
+              Distance
             </p>
-          )}
+            <p className="font-mono text-4xl font-semibold text-rust sm:text-5xl">
+              {active ? `${active.miles.toFixed(2)} mi` : "-"}
+            </p>
+            <p className="mt-1 text-xs text-ink/50">
+              {active
+                ? isPersonalized
+                  ? "Personalized to your height & stride"
+                  : `Standard estimate (${DEFAULT_STEPS_PER_MILE.toLocaleString()} steps/mile)`
+                : "Enter your steps above to get started"}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-3 gap-2 sm:gap-3">
+            <StatChip
+              label="Kilometers"
+              value={active ? `${active.km.toFixed(2)} km` : "-"}
+            />
+            <StatChip label="Walk time" value={active ? active.duration : "-"} />
+            <StatChip
+              label="Calories"
+              value={active ? `${active.calories.toFixed(0)} kcal` : "-"}
+            />
+          </div>
+
+          <p className="text-center text-xs text-ink/50">
+            That&apos;s about{" "}
+            <span className="font-mono text-ink/70">
+              {active ? `${active.percent}%` : "-"}
+            </span>{" "}
+            of the U.S. average of{" "}
+            {US_AVERAGE_DAILY_STEPS.toLocaleString()} daily steps.
+          </p>
 
           <div className="border-t border-forest/10 pt-4">
             <button
@@ -261,7 +259,7 @@ export default function StepsCalculator() {
                           onChange={(e) => setHeightFeet(e.target.value)}
                           className={`${inputClass} w-14 text-right font-mono`}
                         />
-                        <span className="shrink-0 text-[11px] text-ink/40">
+                        <span className="shrink-0 text-xs text-ink/40">
                           ft
                         </span>
                         <input
@@ -273,7 +271,7 @@ export default function StepsCalculator() {
                           onChange={(e) => setHeightInches(e.target.value)}
                           className={`${inputClass} w-14 text-right font-mono`}
                         />
-                        <span className="shrink-0 text-[11px] text-ink/40">
+                        <span className="shrink-0 text-xs text-ink/40">
                           in
                         </span>
                       </>
@@ -288,7 +286,7 @@ export default function StepsCalculator() {
                           onChange={(e) => setHeightCm(e.target.value)}
                           className={`${inputClass} w-20 text-right font-mono`}
                         />
-                        <span className="shrink-0 text-[11px] text-ink/40">
+                        <span className="shrink-0 text-xs text-ink/40">
                           cm
                         </span>
                       </>
@@ -322,7 +320,7 @@ export default function StepsCalculator() {
                         className={`${inputClass} w-20 text-right font-mono`}
                       />
                     )}
-                    <span className="shrink-0 text-[11px] text-ink/40">
+                    <span className="shrink-0 text-xs text-ink/40">
                       {unitSystem === "imperial" ? "lb" : "kg"}
                     </span>
                   </div>

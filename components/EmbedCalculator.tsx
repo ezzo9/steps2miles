@@ -21,7 +21,7 @@ export default function EmbedCalculator() {
       <div className="flex flex-col gap-1.5">
         <label
           htmlFor="embed-steps"
-          className="font-display text-[11px] uppercase tracking-wide text-forest"
+          className="font-display text-xs uppercase tracking-wide text-forest"
         >
           Number of steps
         </label>
@@ -39,7 +39,7 @@ export default function EmbedCalculator() {
       <div className="mt-3 rounded-xl bg-forest/[0.04] px-4 py-3">
         {result ? (
           <>
-            <p className="font-display text-[10px] uppercase tracking-wide text-forest/70">
+            <p className="font-display text-xs uppercase tracking-wide text-forest/70">
               Distance
             </p>
             <p className="font-mono text-3xl font-semibold text-rust">
@@ -47,7 +47,7 @@ export default function EmbedCalculator() {
             </p>
             <div className="mt-2 flex gap-5 border-t border-forest/10 pt-2">
               <div>
-                <p className="text-[9px] uppercase tracking-wide text-ink/50">
+                <p className="text-xs uppercase tracking-wide text-ink/50">
                   Km
                 </p>
                 <p className="font-mono text-xs font-medium text-ink/80">
@@ -55,7 +55,7 @@ export default function EmbedCalculator() {
                 </p>
               </div>
               <div>
-                <p className="text-[9px] uppercase tracking-wide text-ink/50">
+                <p className="text-xs uppercase tracking-wide text-ink/50">
                   Calories
                 </p>
                 <p className="font-mono text-xs font-medium text-ink/80">
@@ -75,7 +75,7 @@ export default function EmbedCalculator() {
         href={SITE_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-3 block text-center text-[10px] text-ink/40 hover:text-rust"
+        className="mt-3 block text-center text-xs text-ink/40 hover:text-rust"
       >
         Powered by Steps2Miles.org
       </a>

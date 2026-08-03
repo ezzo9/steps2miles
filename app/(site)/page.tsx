@@ -70,7 +70,7 @@ export default function Home() {
                 stride.
               </p>
 
-              <div className="mt-2 flex flex-wrap gap-2">
+              <div className="mt-2 hidden flex-wrap gap-2 lg:flex">
                 <span className="rounded-lg border border-forest/10 bg-forest/[0.03] px-3 py-2 text-xs text-ink/70">
                   <span className="font-mono font-medium text-rust">
                     {DEFAULT_STEPS_PER_MILE.toLocaleString()}

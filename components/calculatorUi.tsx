@@ -18,10 +18,10 @@ export function toggleBtnClass(active: boolean): string {
 export function StatChip({ label, value }: { label: string; value: string }) {
   return (
     <div className="rounded-xl border border-forest/10 bg-white px-2 py-2.5 text-center">
-      <p className="text-[10px] uppercase tracking-wide text-ink/50">
+      <p className="text-xs uppercase tracking-wide text-ink/50">
         {label}
       </p>
-      <p className="font-mono text-sm font-medium text-ink/80 sm:text-base">
+      <p className="font-mono text-base font-semibold text-ink/80 sm:text-lg">
         {value}
       </p>
     </div>

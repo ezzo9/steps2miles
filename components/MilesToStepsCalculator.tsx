@@ -71,7 +71,7 @@ export default function MilesToStepsCalculator() {
           <p className="font-mono text-4xl font-semibold text-rust sm:text-5xl">
             {steps === null ? "-" : Math.round(steps).toLocaleString()}
           </p>
-          <p className="mt-1 text-[11px] text-ink/50">
+          <p className="mt-1 text-xs text-ink/50">
             {stepsPerMile
               ? `At about ${Math.round(
                   stepsPerMile

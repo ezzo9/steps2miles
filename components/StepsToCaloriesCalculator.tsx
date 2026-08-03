@@ -116,7 +116,7 @@ export default function StepsToCaloriesCalculator() {
                 <p className="font-mono text-4xl font-semibold text-rust sm:text-5xl">
                   {active.calories.toFixed(0)} kcal
                 </p>
-                <p className="mt-1 text-[11px] text-ink/50">
+                <p className="mt-1 text-xs text-ink/50">
                   {isPersonalized
                     ? "Personalized to your weight & pace"
                     : "Standard estimate (~0.04 kcal/step)"}
@@ -201,7 +201,7 @@ export default function StepsToCaloriesCalculator() {
                         className={`${inputClass} w-20 text-right font-mono`}
                       />
                     )}
-                    <span className="shrink-0 text-[11px] text-ink/40">
+                    <span className="shrink-0 text-xs text-ink/40">
                       {unitSystem === "imperial" ? "lb" : "kg"}
                     </span>
                   </div>

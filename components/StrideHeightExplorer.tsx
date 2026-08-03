@@ -131,7 +131,7 @@ export default function StrideHeightExplorer() {
         aria-label="Height in inches"
         className="w-full accent-rust"
       />
-      <div className="flex justify-between text-[11px] text-ink/40">
+      <div className="flex justify-between text-xs text-ink/40">
         <span>{formatHeight(MIN_HEIGHT_IN)}</span>
         <span>{formatHeight(MAX_HEIGHT_IN)}</span>
       </div>

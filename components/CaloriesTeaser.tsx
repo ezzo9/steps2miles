@@ -39,7 +39,7 @@ export default function CaloriesTeaser() {
           <p className="font-mono text-2xl font-semibold text-rust sm:text-3xl">
             {calories === null ? "-" : `${calories.toFixed(0)} kcal`}
           </p>
-          <p className="text-[11px] uppercase tracking-wide text-ink/50">
+          <p className="text-xs uppercase tracking-wide text-ink/50">
             calories burned
           </p>
         </div>

@@ -63,7 +63,7 @@ export default function MilesToStepsPage() {
       <main className="bg-white">
         <div className="border-b border-forest/10 px-4 pb-6 pt-3 sm:pb-8 sm:pt-4">
           <div className="mx-auto flex w-full max-w-6xl flex-col gap-1.5">
-            <span className="w-fit rounded-full bg-forest/10 px-3 py-1 font-display text-[11px] uppercase tracking-wide text-forest">
+            <span className="w-fit rounded-full bg-forest/10 px-3 py-1 font-display text-xs uppercase tracking-wide text-forest">
               Distance &rarr; Steps
             </span>
             <h1 className="font-display text-2xl uppercase tracking-wide text-forest sm:text-3xl">
@@ -103,7 +103,7 @@ export default function MilesToStepsPage() {
                     <p className="font-mono text-xl font-medium text-rust">
                       {d.steps.toLocaleString()}
                     </p>
-                    <p className="text-[11px] text-ink/50">
+                    <p className="text-xs text-ink/50">
                       {d.miles} mi &middot; steps
                     </p>
                   </div>
@@ -186,7 +186,7 @@ export default function MilesToStepsPage() {
                     <p className="font-mono text-2xl font-medium text-forest">
                       {row.stepsPerMile.toLocaleString()}
                     </p>
-                    <p className="font-display text-[11px] uppercase tracking-wide text-ink/60">
+                    <p className="font-display text-xs uppercase tracking-wide text-ink/60">
                       {row.label}
                     </p>
                   </div>

@@ -126,7 +126,7 @@ export default function CarbonCalculator() {
                 <p className="font-mono text-4xl font-semibold text-rust sm:text-5xl">
                   {Math.round(active.carbon.grams).toLocaleString()} g
                 </p>
-                <p className="mt-1 text-[11px] text-ink/50">
+                <p className="mt-1 text-xs text-ink/50">
                   {isPersonalized
                     ? "Personalized to your height & stride"
                     : "Standard estimate (2,000 steps/mile)"}
@@ -168,7 +168,7 @@ export default function CarbonCalculator() {
                 </div>
               </div>
 
-              <p className="rounded-xl border border-forest/10 bg-forest/[0.03] px-3.5 py-3 text-[11px] leading-relaxed text-ink/60">
+              <p className="rounded-xl border border-forest/10 bg-forest/[0.03] px-3.5 py-3 text-xs leading-relaxed text-ink/60">
                 This assumes the distance would otherwise have been driven in
                 an average gas-powered car. Your actual impact depends on
                 your vehicle, trip habits, and whether the trip would have
@@ -257,7 +257,7 @@ export default function CarbonCalculator() {
                           onChange={(e) => setHeightFeet(e.target.value)}
                           className={`${inputClass} w-14 text-right font-mono`}
                         />
-                        <span className="shrink-0 text-[11px] text-ink/40">
+                        <span className="shrink-0 text-xs text-ink/40">
                           ft
                         </span>
                         <input
@@ -269,7 +269,7 @@ export default function CarbonCalculator() {
                           onChange={(e) => setHeightInches(e.target.value)}
                           className={`${inputClass} w-14 text-right font-mono`}
                         />
-                        <span className="shrink-0 text-[11px] text-ink/40">
+                        <span className="shrink-0 text-xs text-ink/40">
                           in
                         </span>
                       </>
@@ -284,7 +284,7 @@ export default function CarbonCalculator() {
                           onChange={(e) => setHeightCm(e.target.value)}
                           className={`${inputClass} w-20 text-right font-mono`}
                         />
-                        <span className="shrink-0 text-[11px] text-ink/40">
+                        <span className="shrink-0 text-xs text-ink/40">
                           cm
                         </span>
                       </>

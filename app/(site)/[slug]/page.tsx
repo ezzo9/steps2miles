@@ -97,10 +97,10 @@ function ResultStat({
         <Icon className="h-4 w-4" />
       </span>
       <div>
-        <p className="text-[10px] uppercase tracking-wide text-ink/50">
+        <p className="text-xs uppercase tracking-wide text-ink/50">
           {label}
         </p>
-        <p className="font-mono text-sm font-semibold text-ink">{value}</p>
+        <p className="font-mono text-base font-semibold text-ink">{value}</p>
       </div>
     </div>
   );
@@ -290,13 +290,13 @@ export default function StepsToMilesSlugPage({
                   />
                 </svg>
                 <div className="absolute flex flex-col items-center gap-1 text-center">
-                  <p className="font-display text-[10px] uppercase tracking-[0.2em] text-forest/60">
+                  <p className="font-display text-xs uppercase tracking-[0.2em] text-forest/60">
                     Distance
                   </p>
                   <span className="font-mono text-4xl font-bold leading-none text-rust sm:text-5xl">
                     {data.miles.toFixed(2)}
                   </span>
-                  <span className="font-display text-[10px] uppercase tracking-wide text-forest/70">
+                  <span className="font-display text-xs uppercase tracking-wide text-forest/70">
                     Miles
                   </span>
                 </div>
@@ -324,33 +324,33 @@ export default function StepsToMilesSlugPage({
                   <div className="flex flex-col items-center gap-0.5 px-1 py-2.5">
                     <span className="flex items-center gap-1">
                       <ClockIcon className="h-3.5 w-3.5 shrink-0 text-forest" />
-                      <span className="font-mono text-sm font-semibold text-ink">
+                      <span className="font-mono text-base font-semibold text-ink">
                         {data.averagePaceDuration}
                       </span>
                     </span>
-                    <span className="text-[9px] uppercase tracking-wide text-ink/50">
+                    <span className="text-xs uppercase tracking-wide text-ink/50">
                       Walk Time
                     </span>
                   </div>
                   <div className="flex flex-col items-center gap-0.5 px-1 py-2.5">
                     <span className="flex items-center gap-1">
                       <BoltIcon className="h-3.5 w-3.5 shrink-0 text-rust" />
-                      <span className="font-mono text-sm font-semibold text-ink">
+                      <span className="font-mono text-base font-semibold text-ink">
                         {Math.round(calories)} kcal
                       </span>
                     </span>
-                    <span className="text-[9px] uppercase tracking-wide text-ink/50">
+                    <span className="text-xs uppercase tracking-wide text-ink/50">
                       Calories
                     </span>
                   </div>
                   <div className="flex flex-col items-center gap-0.5 px-1 py-2.5">
                     <span className="flex items-center gap-1">
                       <PersonIcon className="h-3.5 w-3.5 shrink-0 text-forest" />
-                      <span className="font-mono text-sm font-semibold text-ink">
+                      <span className="font-mono text-base font-semibold text-ink">
                         {data.percent}%
                       </span>
                     </span>
-                    <span className="text-[9px] uppercase tracking-wide text-ink/50">
+                    <span className="text-xs uppercase tracking-wide text-ink/50">
                       vs. US Avg
                     </span>
                   </div>

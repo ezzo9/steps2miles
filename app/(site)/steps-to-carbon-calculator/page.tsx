@@ -72,7 +72,7 @@ export default function StepsToCarbonCalculatorPage() {
       {/* Asymmetric hero: narrative + quick facts on one side, calculator pinned on the other. */}
       <section className="mx-auto flex w-full max-w-5xl flex-col gap-10 px-4 pb-16 pt-3 sm:pb-20 sm:pt-4 lg:flex-row lg:items-start lg:gap-12">
         <div className="flex flex-col gap-5 lg:w-3/5">
-          <span className="flex w-fit items-center gap-1.5 rounded-full bg-rust/10 px-3 py-1 font-display text-[11px] uppercase tracking-wide text-rust">
+          <span className="flex w-fit items-center gap-1.5 rounded-full bg-rust/10 px-3 py-1 font-display text-xs uppercase tracking-wide text-rust">
             <LeafIcon className="h-3.5 w-3.5 shrink-0" />
             Carbon Calculator
           </span>

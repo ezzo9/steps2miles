@@ -40,7 +40,7 @@ export default function TrustBadges({
           >
             <Icon className="h-4 w-4 sm:h-5 sm:w-5" />
           </span>
-          <span className="text-center text-[10px] font-medium leading-tight text-ink/60 sm:text-xs">
+          <span className="text-center text-xs font-medium leading-tight text-ink/60 sm:text-xs">
             {label}
           </span>
         </div>

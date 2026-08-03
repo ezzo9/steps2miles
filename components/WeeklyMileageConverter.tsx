@@ -35,7 +35,7 @@ export default function WeeklyMileageConverter() {
 
       <div className="flex gap-6">
         <div>
-          <p className="text-[11px] uppercase tracking-wide text-ink/50">
+          <p className="text-xs uppercase tracking-wide text-ink/50">
             Weekly steps
           </p>
           <p className="font-mono text-xl font-medium text-rust">
@@ -45,7 +45,7 @@ export default function WeeklyMileageConverter() {
           </p>
         </div>
         <div>
-          <p className="text-[11px] uppercase tracking-wide text-ink/50">
+          <p className="text-xs uppercase tracking-wide text-ink/50">
             Daily average
           </p>
           <p className="font-mono text-xl font-medium text-forest">
