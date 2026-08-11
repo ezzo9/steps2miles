@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import { Oswald, Inter, JetBrains_Mono } from "next/font/google";
 import { SITE_URL } from "@/lib/site";
 import { buildOgMeta } from "@/lib/ogMeta";
@@ -50,16 +49,6 @@ export default function RootLayout({
       <body
         className={`${oswald.variable} ${inter.variable} ${jetbrainsMono.variable} font-sans bg-white text-ink antialiased`}
       >
-        {/* beforeInteractive is the only next/script strategy Next.js
-            injects into the actual document <head>, which is what Google's
-            AdSense setup instructions require (as high in <head> as
-            possible, on every page). Only valid in the root layout. */}
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3366366920328579"
-          crossOrigin="anonymous"
-          strategy="beforeInteractive"
-        />
         {children}
       </body>
     </html>

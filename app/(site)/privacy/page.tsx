@@ -5,7 +5,7 @@ import { buildBreadcrumbSchema } from "@/lib/breadcrumb";
 
 const TITLE = "Privacy Policy | Steps to Miles Calculator";
 const DESCRIPTION =
-  "What this site does and doesn't collect: no accounts, no stored step data, and how advertising cookies are used.";
+  "What this site does and doesn't collect: no accounts, no stored step data, no ads.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   ...buildOgMeta(TITLE, DESCRIPTION, "/privacy"),
 };
 
-const LAST_UPDATED = "August 2, 2026";
+const LAST_UPDATED = "August 11, 2026";
 
 export default function PrivacyPage() {
   const breadcrumbSchema = buildBreadcrumbSchema([
@@ -40,9 +40,7 @@ export default function PrivacyPage() {
             This site is run by one person, not a company with a data team,
             so the short version is easy to state plainly: the calculators
             don&apos;t ask for an account, don&apos;t store what you type, and don&apos;t
-            track your steps over time. The rest of this page covers the
-            details, including the one place third-party cookies are
-            involved, advertising.
+            track your steps over time.
           </p>
         </div>
 
@@ -73,42 +71,6 @@ export default function PrivacyPage() {
         </div>
 
         <div className="flex flex-col gap-3">
-          <SectionHeading>Cookies &amp; Advertising</SectionHeading>
-          <p className="text-ink/80 leading-relaxed">
-            This site is free to use and stays that way by showing ads
-            through Google AdSense. Google and its advertising partners may
-            use cookies or similar technology to serve ads based on your
-            visits here and to other sites, and to measure ad performance.
-            This site doesn&apos;t control that data or have access to it, it&apos;s
-            handled entirely by Google under their own privacy terms.
-          </p>
-          <p className="text-ink/80 leading-relaxed">
-            You can see what Google collects for ad personalization, and opt
-            out of personalized ads entirely, at Google&apos;s{" "}
-            <a
-              href="https://adssettings.google.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-rust hover:underline"
-            >
-              Ad Settings
-            </a>{" "}
-            page, or learn more generally at{" "}
-            <a
-              href="https://policies.google.com/technologies/ads"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-rust hover:underline"
-            >
-              How Google Uses Information from Sites or Apps That Use Our
-              Services
-            </a>
-            . Most browsers also let you block third-party cookies directly
-            in their settings if you&apos;d rather not rely on an opt-out page.
-          </p>
-        </div>
-
-        <div className="flex flex-col gap-3">
           <SectionHeading>Analytics</SectionHeading>
           <p className="text-ink/80 leading-relaxed">
             There&apos;s no first-party analytics script installed on this site,
@@ -125,9 +87,7 @@ export default function PrivacyPage() {
             This site doesn&apos;t knowingly collect personal information from
             anyone, of any age, for the reasons above, there&apos;s simply no
             data collection built into the calculators themselves. It isn&apos;t
-            directed at children, and the advertising served through Google
-            AdSense is subject to Google&apos;s own policies on child-directed
-            content.
+            directed at children.
           </p>
         </div>
 
