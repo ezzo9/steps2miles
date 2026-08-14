@@ -49,8 +49,11 @@ async function submitBatch(batch: string[]) {
   }
 }
 
-for (let i = 0; i < urlList.length; i += BATCH_SIZE) {
-  await submitBatch(urlList.slice(i, i + BATCH_SIZE));
+async function main() {
+  for (let i = 0; i < urlList.length; i += BATCH_SIZE) {
+    await submitBatch(urlList.slice(i, i + BATCH_SIZE));
+  }
+  console.log(`Done. ${urlList.length} total URLs submitted to IndexNow.`);
 }
 
-console.log(`Done. ${urlList.length} total URLs submitted to IndexNow.`);
+main();
